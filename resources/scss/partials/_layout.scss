@@ -1,0 +1,60 @@
+/* ---------------- LAYOUT ----------------- */
+
+// CONTAINER
+@mixin container($max-width: 1200px) {
+    margin: auto;
+    width: $max-width;
+}
+
+.container-big {
+    @include container();
+}
+
+.container-medium {
+    @include container($max-width: 780px);
+}
+
+.container-small {
+    @include container($max-width: 520px);
+}
+
+.mc-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/* JUSTIFY */
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+/*----------- COLUMN -----------*/
+@mixin col($width) {
+    width: $width;
+}
+
+.col-10 {
+    @include col(10%);
+}
+
+.col-20 {
+    @include col(20%);
+}
+
+.col-30 {
+    @include col(30%);
+}
+
+.col-33 {
+    @include col(calc(100% / 3 - 20px));
+    margin: 20px 10px;
+}
